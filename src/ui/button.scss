@@ -11,6 +11,8 @@
   line-height: 2em;
   font-size: 1em;
 
+  cursor: pointer;
+
   &[disabled] {
     color: var(--titan-disabled-color)
   }
