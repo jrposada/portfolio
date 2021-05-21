@@ -1,6 +1,25 @@
 :root {
-  --ui-background-color: #fffffff;
+  // Basic
+  --titan-background: #ffffff;
+  --titan-color: black;
+  --titan-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  --titan-font-family: Roboto, Helvetica Neue, sans-serif;
 
-  /* Header */
-  --ui-header-background-color: #fffffff;
+  // Primary
+  --titan-primary-background: blue;
+  --titan-primary-color: white;
+  --titan-primary-border-color: blue;
+
+  // Warn
+  --titan-warn-background: red;
+  --titan-warn-color: white;
+  --titan-warn-border-color: red;
+
+  // Disabled
+  --titan-disabled-background: grey;
+  --titan-disabled-color: lightgrey;
+  --titan-disabled-border-color: black;
+
+  // Header
+  // --ui-header-background-color: #ffffff;
 }

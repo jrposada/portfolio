@@ -1,0 +1,70 @@
+.titan-button {
+  background-color: var(--titan-background);
+  color: var(--titan-color);
+
+  border-radius: 4px;
+  border: none;
+
+  padding: 0px 16px;
+  margin: 8px 8px 8px 0px;
+
+  line-height: 2em;
+  font-size: 1em;
+
+  &[disabled] {
+    color: var(--titan-disabled-color)
+  }
+
+  &--primary {
+    background-color: var(--titan-primary-background);
+    color: var(--titan-primary-color);
+
+    &.titan-button {
+      &--bordered,
+      &--dashed {
+        border-color: var(--titan-primary-border-color);
+      }
+
+      &--dashed {
+        background-color: var(--titan-background);
+        color: var(--titan-primary-background);
+      }
+    }
+  }
+
+  &--warn {
+    background-color: var(--titan-warn-background);
+    color: var(--titan-warn-color);
+
+    &.titan-button {
+      &--bordered,
+      &--dashed {
+        border-color: var(--titan-warn-border-color);
+      }
+
+      &--dashed {
+        background-color: var(--titan-background);
+        color: var(--titan-warn-background);
+      }
+    }
+  }
+
+  &--raised {
+    box-shadow: var(--titan-shadow);
+    font-weight: bolder;
+
+    &[disabled] {
+      background-color: var(--titan-disabled-background);
+    }
+  }
+
+  &--bordered {
+    border: 1px solid currentColor;
+  }
+
+  &--dashed {
+    border: 1px dashed currentColor;
+  }
+
+
+}

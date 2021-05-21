@@ -11,7 +11,7 @@ function Header() {
     <header className="header">
       <SearchBar />
       <Expander />
-      <Button />
+      <Button>Button</Button>
       <Switch />
       <Dropdown />
     </header>
