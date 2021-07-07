@@ -1,15 +1,15 @@
-import Header from './components/header';
-import './App.scss';
-import ThemeProvider from 'ui/theme-provider';
-import Buttons from 'components/buttons';
+import ThemeProvider from 'react-ui/theme-provider'
+import MainLayout from 'components/main-layout/main-layout'
+
+import './App.scss'
+import React from 'react'
 
 function App() {
   return (
     <ThemeProvider theme={{ backgroundColor: 'black' }}>
-      <Header />
-      <div><Buttons /></div>
+      <MainLayout />
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
