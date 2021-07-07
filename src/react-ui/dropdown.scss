@@ -1,0 +1,33 @@
+.titan-dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__trigger {
+    margin: 0 auto;
+
+    display: inline-flex;
+    align-items: center;
+
+    background-color: var(--titan-background);
+    color: var(--titan-color);
+
+    border-radius: 4px;
+    border: none;
+
+    padding: 0px 16px;
+    margin: 8px 8px 0px 0px;
+
+    line-height: 2em;
+    font-size: 1em;
+
+    cursor: pointer;
+  }
+
+  &__panel {
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+    background-color: var(--titan-background);
+  }
+}

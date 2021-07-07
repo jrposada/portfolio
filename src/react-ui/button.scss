@@ -1,4 +1,7 @@
 .titan-button {
+  display: inline-flex;
+  align-items: center;
+
   background-color: var(--titan-background);
   color: var(--titan-color);
 
@@ -14,7 +17,7 @@
   cursor: pointer;
 
   &[disabled] {
-    color: var(--titan-disabled-color)
+    color: var(--titan-disabled-color);
   }
 
   &--primary {
@@ -67,6 +70,4 @@
   &--dashed {
     border: 1px dashed currentColor;
   }
-
-
 }
