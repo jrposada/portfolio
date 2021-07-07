@@ -19,7 +19,8 @@
   },
   "author": "Javier Rodriguez Posada",
   "keywords": [
-    "portfolio"
+    "portfolio",
+    "react"
   ],
   "eslintConfig": {
     "extends": [
@@ -38,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@iconify-icons/mdi": "^1.1.15",
+    "@iconify/react": "^1.1.4"
   }
 }
