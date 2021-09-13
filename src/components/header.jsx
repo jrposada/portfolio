@@ -11,16 +11,24 @@ import Button from 'react-ui/button'
 import './header.scss'
 
 function Header() {
+  function goToLinkedin() {
+    console.log('Go to linkedin')
+  }
+
+  function goToGithub() {
+    console.log('Go to github')
+  }
+
   return (
     <header className="header">
       <SearchBar />
       <Expander />
       <Button>CV</Button>
-      <Button>
+      <Button onClick={goToLinkedin}>
         <Icon icon={linkedinIcon} style={{ height: '1em' }}></Icon>
         mmm
       </Button>
-      <Button>
+      <Button onClick={goToGithub}>
         <Icon icon={githubIcon}></Icon>
       </Button>
       <Switch />

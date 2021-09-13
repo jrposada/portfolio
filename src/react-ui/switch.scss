@@ -1,0 +1,61 @@
+$background-size: 32px;
+$handle-size: 16px;
+$handle-offset: calc((#{$background-size} - #{$handle-size}) / 2);
+
+.switch {
+  display: inline-flex;
+
+  line-height: 2em;
+  font-size: 1em;
+
+  &__visual {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: $background-size;
+    width: $background-size * 2;
+    margin: $background-size / 2;
+    border-radius: $background-size / 2;
+    background-color: #333333;
+
+    transition: left 0.5s ease, background-color 0.5s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: $handle-offset;
+      left: $handle-offset;
+      height: $handle-size;
+      width: $handle-size;
+      background-color: #f5f5f5;
+      border-radius: 7px;
+
+      transition: left 0.5s ease, background-color 0.5s ease;
+    }
+
+    & svg {
+      fill: #f5f5f5;
+      color: #f5f5f5;
+
+      margin: 0 $handle-offset;
+    }
+
+    &--checked {
+      background-color: #f5f5f5;
+
+      &::after {
+        left: calc(100% - #{$handle-size} - #{$handle-offset});
+
+        background-color: #333333;
+      }
+
+      & svg {
+        fill: #333333;
+        color: #333333;
+      }
+    }
+  }
+}

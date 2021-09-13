@@ -1,0 +1,27 @@
+.main-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'left center right';
+
+  &__left {
+    grid-area: left;
+    justify-self: left;
+
+    display: flex;
+    align-items: center;
+  }
+  &__center {
+    grid-area: center;
+    justify-self: center;
+
+    display: flex;
+    align-items: center;
+  }
+  &__right {
+    grid-area: right;
+    justify-self: right;
+
+    display: flex;
+    align-items: center;
+  }
+}

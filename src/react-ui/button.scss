@@ -9,7 +9,7 @@
   border: none;
 
   padding: 0px 16px;
-  margin: 8px 8px 8px 0px;
+  margin: 8px 8px 8px 8px;
 
   line-height: 2em;
   font-size: 1em;
@@ -69,5 +69,9 @@
 
   &--dashed {
     border: 1px dashed currentColor;
+  }
+
+  &--icon {
+    padding: 0px;
   }
 }

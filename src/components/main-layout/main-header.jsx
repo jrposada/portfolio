@@ -1,22 +1,22 @@
 import linkedinIcon from '@iconify-icons/mdi/linkedin'
 import githubIcon from '@iconify-icons/mdi/github'
+import azureIcon from '@iconify-icons/mdi/azure'
+import moonIcon from '@iconify-icons/mdi/moon-waxing-crescent'
+import sunIcon from '@iconify/icons-mdi/white-balance-sunny'
 import { Icon } from '@iconify/react'
+import { useCallback } from 'react'
 import Button from 'react-ui/button'
 import Switch from 'react-ui/switch'
 import Select from 'react-ui/select'
 import SearchBar from 'react-ui/search-bar'
+import ExternalNavLink from 'components/externalNavLink'
+
+import './main-header.scss'
 
 function MainHeader() {
-  function goToLinkedin() {
-    console.log('go to linkedin')
-  }
-  function goToGithub() {
-    console.log('go to github')
-  }
-
-  function toggleDarkMode() {
+  const toggleDarkMode = useCallback(() => {
     console.log('toggle dark mode')
-  }
+  }, [])
 
   return (
     <div className="main-header">
@@ -30,13 +30,26 @@ function MainHeader() {
         <SearchBar />
       </div>
       <div className="main-header__right">
-        <Button onClick={goToLinkedin}>
-          <Icon icon={linkedinIcon} />
-        </Button>
-        <Button onClick={goToGithub}>
-          <Icon icon={githubIcon} />
-        </Button>
-        <Switch onChange={toggleDarkMode}></Switch>
+        <ExternalNavLink to="https://www.linkedin.com/in/javier-rodr%C3%ADguez-posada-68086b123/">
+          <Button icon>
+            <Icon widht="1.5em" height="1.5em" icon={linkedinIcon} />
+          </Button>
+        </ExternalNavLink>
+        <ExternalNavLink to="https://github.com/jrposada/">
+          <Button icon>
+            <Icon widht="1.5em" height="1.5em" icon={githubIcon} />
+          </Button>
+        </ExternalNavLink>
+        <ExternalNavLink to="https://javiropos.visualstudio.com/">
+          <Button icon>
+            <Icon widht="1.5em" height="1.5em" icon={azureIcon} />
+          </Button>
+        </ExternalNavLink>
+        <Switch
+          onChange={toggleDarkMode}
+          checkedIcon={sunIcon}
+          uncheckedIcon={moonIcon}
+        ></Switch>
       </div>
     </div>
   )

@@ -2,6 +2,8 @@ import MainHeader from './main-header'
 import MainBody from './main-body'
 import MainFooter from './main-footer'
 
+import './main-layout.scss'
+
 function MainLayout() {
   return (
     <div className="main-layout">
