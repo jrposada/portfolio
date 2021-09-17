@@ -29,6 +29,7 @@ function Select({
 
   let cssClass = `react-ui-select`
   if (loading) cssClass += ' react-ui-select--loading'
+  if (disabled) cssClass += ' react-ui-select--disabled'
   if (className) cssClass += ` ${className}`
 
   return (

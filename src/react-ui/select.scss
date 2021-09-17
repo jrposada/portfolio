@@ -46,6 +46,8 @@
     margin-right: calc(var(--react-ui-element-padding-left-right) / 2);
     width: 1em;
     height: 1em;
+
+    color: currentColor;
   }
 
   &--loading {
@@ -55,6 +57,11 @@
       animation-iteration-count: infinite;
       animation-timing-function: linear;
     }
+  }
+
+  &--disabled {
+    background-color: var(--react-ui-element-disabled-background-color);
+    color: var(--react-ui-element-disabled-color);
   }
 }
 

@@ -16,6 +16,7 @@ import './main-header.scss'
 
 function MainHeader() {
   const [isLoading, setIsLoading] = useState(false)
+  const [isDisabled, setIsDisabled] = useState(false)
   const toggleDarkMode = useCallback(() => {
     console.log('toggle dark mode')
   }, [])
@@ -23,12 +24,15 @@ function MainHeader() {
   return (
     <div className="main-header">
       <div className="main-header__left">
-        <Select name="lang" loading={isLoading}>
+        <Select name="lang" loading={isLoading} disabled={isDisabled}>
           <Select.Option value="en">EN</Select.Option>
           <Select.Option value="es">ES</Select.Option>
         </Select>
         <Button onClick={() => setIsLoading(!isLoading)} primary>
-          Toogle
+          Loading
+        </Button>
+        <Button onClick={() => setIsDisabled(!isDisabled)} primary>
+          Disable
         </Button>
       </div>
       <div className="main-header__center">

@@ -12,7 +12,10 @@
   --react-ui-element-padding: var(--react-ui-element-padding-top-bottom)
     var(--react-ui-element-padding-left-right);
 
-  --react-ui-element-border-radius: 4px;
+  --react-ui-element-border-radius: 2px;
+
+  --react-ui-element-disabled-background-color: #f5f5f5;
+  --react-ui-element-disabled-color: #d3d3d3;
 
   // Primary
   --react-ui-primary-background: blue;
