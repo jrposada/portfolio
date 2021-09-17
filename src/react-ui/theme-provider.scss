@@ -1,30 +1,40 @@
 :root {
   // Basic
-  --titan-background: #ffffff;
-  --titan-color: black;
-  --titan-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%);
-  --titan-font-family: Roboto, Helvetica Neue, sans-serif;
+  --react-ui-background: #ffffff;
+  --react-ui-color: black;
+  --react-ui-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%),
+    0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  --react-ui-font-family: Roboto, Helvetica Neue, sans-serif;
+
+  --react-ui-element-margin: 8px;
+  --react-ui-element-padding-left-right: 16px;
+  --react-ui-element-padding-top-bottom: 0px;
+  --react-ui-element-padding: var(--react-ui-element-padding-top-bottom)
+    var(--react-ui-element-padding-left-right);
+
+  --react-ui-element-border-radius: 4px;
 
   // Primary
-  --titan-primary-background: blue;
-  --titan-primary-color: white;
-  --titan-primary-border-color: blue;
+  --react-ui-primary-background: blue;
+  --react-ui-primary-color: white;
+  --react-ui-primary-border-color: blue;
 
   // Warn
-  --titan-warn-background: red;
-  --titan-warn-color: white;
-  --titan-warn-border-color: red;
+  --react-ui-warn-background: red;
+  --react-ui-warn-color: white;
+  --react-ui-warn-border-color: red;
 
   // Disabled
-  --titan-disabled-background: grey;
-  --titan-disabled-color: lightgrey;
-  --titan-disabled-border-color: black;
+  --react-ui-disabled-background: grey;
+  --react-ui-disabled-color: lightgrey;
+  --react-ui-disabled-border-color: black;
 
   // Header
   // --ui-header-background-color: #ffffff;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }

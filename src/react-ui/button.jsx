@@ -11,13 +11,14 @@ function Button({
   icon,
   ...restProps
 }) {
-  let cssClass = `titan-button`
-  if (primary) cssClass += ' titan-button--primary'
-  if (warn) cssClass += ' titan-button--warn'
-  if (raised) cssClass += ' titan-button--raised'
-  if (bordered) cssClass += ' titan-button--bordered'
-  if (dashed) cssClass += ' titan-button--dashed'
-  if (icon) cssClass += ' titan-button--icon'
+  let cssClass = `react-ui-button`
+  if (primary) cssClass += ' react-ui-button--primary'
+  if (warn) cssClass += ' react-ui-button--warn'
+  if (raised) cssClass += ' react-ui-button--raised'
+  if (bordered) cssClass += ' react-ui-button--bordered'
+  if (dashed) cssClass += ' react-ui-button--dashed'
+  if (icon) cssClass += ' react-ui-button--icon'
+  if (className) cssClass += ` ${className}`
 
   return (
     <button className={cssClass} {...restProps}>

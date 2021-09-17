@@ -10,10 +10,12 @@ import Switch from 'react-ui/switch'
 import Select from 'react-ui/select'
 import SearchBar from 'react-ui/search-bar'
 import ExternalNavLink from 'components/externalNavLink'
+import { useState } from 'react'
 
 import './main-header.scss'
 
 function MainHeader() {
+  const [isLoading, setIsLoading] = useState(false)
   const toggleDarkMode = useCallback(() => {
     console.log('toggle dark mode')
   }, [])
@@ -21,10 +23,13 @@ function MainHeader() {
   return (
     <div className="main-header">
       <div className="main-header__left">
-        <Select name="lang">
+        <Select name="lang" loading={isLoading}>
           <Select.Option value="en">EN</Select.Option>
           <Select.Option value="es">ES</Select.Option>
         </Select>
+        <Button onClick={() => setIsLoading(!isLoading)} primary>
+          Toogle
+        </Button>
       </div>
       <div className="main-header__center">
         <SearchBar />
