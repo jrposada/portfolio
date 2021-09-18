@@ -21,10 +21,19 @@ function MainHeader() {
     console.log('toggle dark mode')
   }, [])
 
+  const changeLanguage = useCallback((lang) => {
+    console.log(lang)
+  }, [])
+
   return (
     <div className="main-header">
       <div className="main-header__left">
-        <Select name="lang" loading={isLoading} disabled={isDisabled}>
+        <Select
+          name="lang"
+          loading={isLoading}
+          disabled={isDisabled}
+          onChange={changeLanguage}
+        >
           <Select.Option value="en">EN</Select.Option>
           <Select.Option value="es">ES</Select.Option>
         </Select>

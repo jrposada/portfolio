@@ -2,23 +2,14 @@
   position: relative;
   display: inline-block;
 
-  &__trigger {
-    margin: 0 auto;
+  margin: var(--react-ui-element-margin);
 
+  &__trigger {
     display: inline-flex;
     align-items: center;
 
     background-color: var(--react-ui-background);
     color: var(--react-ui-color);
-
-    border-radius: 4px;
-    border: none;
-
-    padding: 0px 16px;
-    margin: 8px 8px 0px 0px;
-
-    line-height: 2em;
-    font-size: 1em;
 
     cursor: pointer;
   }
@@ -27,7 +18,25 @@
     display: none;
     position: absolute;
     z-index: 1;
+    cursor: auto;
 
     background-color: var(--react-ui-background);
+
+    &--open {
+      display: block;
+    }
+
+    &--top {
+      bottom: 100%;
+    }
+    &--left {
+      right: 100%;
+    }
+    &--bottom {
+      top: 100%;
+    }
+    &--right {
+      left: 100%;
+    }
   }
 }

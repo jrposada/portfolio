@@ -3,19 +3,27 @@ const { default: Dropdown } = require('react-ui/dropdown')
 function Dropwdowns() {
   const panel = () => {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          border: '1px solid black',
+        }}
+      >
         <div>Paco</div>
         <div>Juan</div>
         <div>Alberto</div>
-        <div>Alberto</div>
+        <div>AlbertoAlbertoAlbertoAlbertoAlberto</div>
       </div>
     )
   }
   return (
     <>
-      <Dropdown panel={panel()}>Dropdown</Dropdown>
-      <Dropdown panel={panel()} primary>
-        Dropdown
+      <Dropdown panel={panel()} trigger="hover">
+        Hover me!
+      </Dropdown>
+      <Dropdown panel={panel()} primary position="top">
+        Top
       </Dropdown>
       <Dropdown panel={panel()} warn>
         Dropdown
@@ -24,8 +32,8 @@ function Dropwdowns() {
       <Dropdown panel={panel()} raised>
         Dropdown
       </Dropdown>
-      <Dropdown panel={panel()} raised primary>
-        Dropdown
+      <Dropdown panel={panel()} raised primary position="left">
+        Left
       </Dropdown>
       <Dropdown panel={panel()} raised warn>
         Dropdown
@@ -34,8 +42,8 @@ function Dropwdowns() {
       <Dropdown panel={panel()} bordered>
         Dropdown
       </Dropdown>
-      <Dropdown panel={panel()} bordered primary>
-        Dropdown
+      <Dropdown panel={panel()} bordered primary position="bottom">
+        Bottom
       </Dropdown>
       <Dropdown panel={panel()} bordered warn>
         Dropdown
@@ -44,8 +52,8 @@ function Dropwdowns() {
       <Dropdown panel={panel()} dashed>
         Dropdown
       </Dropdown>
-      <Dropdown panel={panel()} dashed primary>
-        Dropdown
+      <Dropdown panel={panel()} dashed primary position="right">
+        Right
       </Dropdown>
       <Dropdown panel={panel()} dashed warn>
         Dropdown

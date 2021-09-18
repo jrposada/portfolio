@@ -1,12 +1,21 @@
 import Icon from '@iconify/react'
 import loadingIconSrc from '@iconify-icons/mdi/loading'
 import dropdownIconSrc from '@iconify-icons/mdi/chevron-down'
-import React, { PropsWithChildren, useRef } from 'react'
+import React, {
+  ChangeEvent,
+  ChangeEventHandler,
+  PropsWithChildren,
+  useCallback,
+  useRef,
+} from 'react'
+
+import Dropdown from './dropdown'
 
 import './select.scss'
 
-interface SelectProps {
-  name: string
+interface SelectProps<TData> {
+  name?: string
+  onChange?: (value: TData) => void
   loading?: boolean
   disabled?: boolean
   icon?: React.ReactNode
@@ -14,8 +23,9 @@ interface SelectProps {
   clearIcon?: React.ReactNode
   className?: string
 }
-function Select({
+function Select<TData = object>({
   name,
+  onChange,
   loading,
   disabled,
   icon,
@@ -24,7 +34,7 @@ function Select({
   className,
   children,
   ...restProps
-}: PropsWithChildren<SelectProps>) {
+}: PropsWithChildren<SelectProps<TData>>) {
   const selectRef = useRef<HTMLSelectElement>(null)
 
   let cssClass = `react-ui-select`
@@ -32,9 +42,24 @@ function Select({
   if (disabled) cssClass += ' react-ui-select--disabled'
   if (className) cssClass += ` ${className}`
 
+  const handleChange: ChangeEventHandler<HTMLSelectElement> = useCallback(
+    (selectChangeEvent: ChangeEvent<HTMLSelectElement>) => {
+      onChange?.(selectChangeEvent.target.dataset as unknown as TData)
+    },
+    [onChange]
+  )
+
   return (
+    // <Dropdown panel={<></>}>
     <div className={cssClass}>
-      <select ref={selectRef} name={name} disabled={disabled} {...restProps}>
+      <select
+        // hidden
+        ref={selectRef}
+        name={name}
+        onChange={handleChange}
+        disabled={disabled}
+        {...restProps}
+      >
         {children}
       </select>
       <div className="react-ui-select__icon">
@@ -51,6 +76,7 @@ function Select({
         )}
       </div>
     </div>
+    // </Dropdown>
   )
 }
 

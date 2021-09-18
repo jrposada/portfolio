@@ -9,6 +9,8 @@
   border-radius: var(--react-ui-element-border-radius);
   border: 1px solid currentColor;
 
+  transition: border-color 0.5s ease;
+
   & select {
     appearance: none;
     outline: none;
@@ -29,8 +31,12 @@
     grid-area: select;
 
     &:focus {
-      outline: auto;
+      box-shadow: 0px 0px 2px 1px var(--react-ui-element-focus-border-color);
     }
+  }
+
+  &:hover {
+    border-color: var(--react-ui-element-focus-border-color);
   }
 
   &__icon {
