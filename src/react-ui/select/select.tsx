@@ -1,6 +1,6 @@
 import Icon from '@iconify/react'
-import loadingIconSrc from '@iconify-icons/mdi/loading'
-import dropdownIconSrc from '@iconify-icons/mdi/chevron-down'
+import loadingIconSrc from '@iconify/icons-mdi/loading'
+import dropdownIconSrc from '@iconify/icons-mdi/chevron-down'
 import React, {
   ChangeEvent,
   ChangeEventHandler,

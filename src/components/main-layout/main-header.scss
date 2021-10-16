@@ -1,11 +1,22 @@
+$padding: 10px 20px;
+$gap: 8px;
+
+@mixin spacing {
+  padding: $padding;
+  gap: $gap;
+}
+
 .main-header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto 1fr auto;
   grid-template-areas: 'left center right';
+
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
 
   &__left {
     grid-area: left;
     justify-self: left;
+    @include spacing;
 
     display: flex;
     align-items: center;
@@ -13,6 +24,7 @@
   &__center {
     grid-area: center;
     justify-self: center;
+    @include spacing;
 
     display: flex;
     align-items: center;
@@ -20,6 +32,7 @@
   &__right {
     grid-area: right;
     justify-self: right;
+    @include spacing;
 
     display: flex;
     align-items: center;
