@@ -1,4 +1,4 @@
-const { default: Dropdown } = require('react-ui/dropdown')
+const { default: Dropdown } = require('react-ui/dropdown/dropdown')
 
 function Dropwdowns() {
   const panel = () => {

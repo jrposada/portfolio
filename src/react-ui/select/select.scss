@@ -1,3 +1,5 @@
+$icon-size: 1em;
+
 .react-ui-select {
   display: inline-grid;
   grid-template-areas: 'select';
@@ -39,6 +41,18 @@
     border-color: var(--react-ui-element-focus-border-color);
   }
 
+  &__value {
+    display: flex;
+    align-items: center;
+
+    grid-area: select;
+    justify-self: start;
+
+    margin-right: calc(
+      var(--react-ui-element-padding-left-right) / 2 + #{$icon-size}
+    );
+  }
+
   &__icon {
     content: '';
     pointer-events: none;
@@ -50,8 +64,8 @@
     justify-self: end;
 
     margin-right: calc(var(--react-ui-element-padding-left-right) / 2);
-    width: 1em;
-    height: 1em;
+    width: $icon-size;
+    height: $icon-size;
 
     color: currentColor;
   }

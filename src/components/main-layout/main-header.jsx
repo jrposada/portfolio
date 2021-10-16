@@ -7,7 +7,8 @@ import { Icon } from '@iconify/react'
 import { useCallback } from 'react'
 import Button from 'react-ui/button'
 import Switch from 'react-ui/switch'
-import Select from 'react-ui/select'
+import Select from 'react-ui/select/select'
+import Option from 'react-ui/select/option'
 import SearchBar from 'react-ui/search-bar'
 import ExternalNavLink from 'components/externalNavLink'
 import { useState } from 'react'
@@ -34,8 +35,14 @@ function MainHeader() {
           disabled={isDisabled}
           onChange={changeLanguage}
         >
-          <Select.Option value="en">EN</Select.Option>
-          <Select.Option value="es">ES</Select.Option>
+          <Option value="en">
+            {/* <Icon icon="twemoji:flag-for-flag-united-states" /> */}
+            EN
+          </Option>
+          <Option value="es">
+            {/* <Icon icon="twemoji:flag-for-flag-united-states" /> */}
+            ES
+          </Option>
         </Select>
         <Button onClick={() => setIsLoading(!isLoading)} primary>
           Loading

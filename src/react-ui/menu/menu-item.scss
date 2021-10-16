@@ -1,0 +1,7 @@
+.menu-item {
+  padding: var(--react-ui-element-padding);
+
+  &:hover {
+    background-color: currentColor;
+  }
+}
