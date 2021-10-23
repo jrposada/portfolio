@@ -28,7 +28,7 @@ function ProjectCard({
               {description}
               <div>
                 {tags.map((t) => (
-                  <Tag>t</Tag>
+                  <Tag>{t}</Tag>
                 ))}
               </div>
             </>
@@ -40,3 +40,4 @@ function ProjectCard({
 }
 
 export default ProjectCard
+export type { ProjectCardProps }
