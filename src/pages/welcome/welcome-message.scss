@@ -1,0 +1,21 @@
+.welcome-message {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f8fdff;
+
+  &__content {
+    display: grid;
+    align-items: center;
+    max-width: 70em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__description {
+    padding: 0px 30px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

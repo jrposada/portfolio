@@ -1,10 +1,11 @@
-import { Avatar, Card } from 'antd'
+import { Avatar, Card, Tag } from 'antd'
 import ExternalNavLink from 'components/externalNavLink'
 
 interface ProjectCardProps {
   to: string
   title: string
   description: string
+  tags: string[]
   image: string
   thumbnail: string
 }
@@ -12,6 +13,7 @@ function ProjectCard({
   to,
   title,
   description,
+  tags,
   image,
   thumbnail,
 }: ProjectCardProps) {
@@ -21,7 +23,16 @@ function ProjectCard({
         <Card.Meta
           avatar={<Avatar src={thumbnail} />}
           title={title}
-          description={description}
+          description={
+            <>
+              {description}
+              <div>
+                {tags.map((t) => (
+                  <Tag>t</Tag>
+                ))}
+              </div>
+            </>
+          }
         />
       </Card>
     </ExternalNavLink>

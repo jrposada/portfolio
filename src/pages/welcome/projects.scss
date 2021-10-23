@@ -1,6 +1,18 @@
 .projects {
-  display: grid;
-  grid-template-columns: repeat(3, 40em);
-  justify-content: center;
-  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 2em;
+
+  & > .projects__title {
+    text-align: center;
+    margin: 0px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 4em;
+  }
 }

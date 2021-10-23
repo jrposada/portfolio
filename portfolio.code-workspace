@@ -34,7 +34,9 @@
     "recommendations": [
       "dbaeumer.vscode-eslint",
       "editorconfig.editorconfig",
-      "esbenp.prettier-vscode"
+      "esbenp.prettier-vscode",
+      "mishannn.vscode-file-suggest",
+      "coenraads.bracket-pair-colorizer"
     ]
   }
 }

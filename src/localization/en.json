@@ -1,6 +1,9 @@
 {
   "translation": {
     "general.search": "Search",
-    "welcome.message": "Industrial Automation engineer specialized in software development. I have professional experience in the development of web and WPF applications. I have more than 3 years in web development and have extensive knowledge of both Angular 2 and React frameworks. I am also experienced in project management and interacting with the client to define and align product definitions and functionalities as well as creating interact mock-ups and small visual specs. I am a meticulous and self-driven professional. I am capable not only of developing a product that works, but also one that is maintainable and extensible, which allows to give value to the business through code reuse and faster development. I speak three languages and in my free time I like to read about new technologies, play videogames and practice outdoor sports."
+    "welcome.title": "Javier Rodríguez Posada",
+    "welcome.subtitle": "SOFTWARE DEVELOPER",
+    "welcome.presentation": "Hi, I'm a full stack developer with 4+ years of experience in web development. I've worked with the some of the major frontend frameworks like React and Angular. I also have extensive knowledge in .Net wich I use for the backend side.",
+    "projects.title": "Projects"
   }
 }
