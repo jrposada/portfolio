@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom'
 
 import './i18n'
 
-import './index.scss'
 import App from 'App'
 import reportWebVitals from './reportWebVitals'
+
+import './index.scss'
 
 ReactDOM.render(
   <React.StrictMode>
