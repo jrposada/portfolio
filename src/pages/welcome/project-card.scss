@@ -1,0 +1,7 @@
+.project-card {
+  &__tags {
+    > .ant-tag {
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import githubIcon from '@iconify/icons-mdi/github'
 import { Typography } from 'antd'
 import { WithTranslation, withTranslation } from 'react-i18next'
 
@@ -7,7 +8,7 @@ import './projects.scss'
 
 const PROJECT_INFOS: ProjectCardProps[] = [
   {
-    to: 'https://github.com/jrposada/data-visualizer',
+    projectId: 'data-visualizer',
     title: 'Data Visualizer',
     description: '',
     tags: [
@@ -20,31 +21,28 @@ const PROJECT_INFOS: ProjectCardProps[] = [
     ],
     image:
       'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png',
-    thumbnail:
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    thumbnail: githubIcon,
   },
   {
-    to: 'https://github.com/jrposada/GroupActivityFinderExtensions',
+    projectId: 'GroupActivityFinderExtensions',
     title: 'Group & Activity Finder Extensions',
     description: '',
     tags: ['Lua', 'Game', 'Mod'],
     image:
       'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png',
-    thumbnail:
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    thumbnail: githubIcon,
   },
   {
-    to: 'https://github.com/jrposada/recipe-book',
+    projectId: 'recipe-book',
     title: 'Recipe Book',
     description: '',
     tags: ['React', 'TypeScript', 'Web'],
     image:
       'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png',
-    thumbnail:
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    thumbnail: githubIcon,
   },
   {
-    to: 'https://github.com/jrposada/react-jest-mock',
+    projectId: 'react-jest-mock',
     title: 'React Jest Mock',
     description: '',
     tags: [
@@ -58,32 +56,30 @@ const PROJECT_INFOS: ProjectCardProps[] = [
     ],
     image:
       'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png',
-    thumbnail:
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    thumbnail: githubIcon,
   },
   {
-    to: 'https://github.com/jrposada/welcome-to-react',
+    projectId: 'welcome-to-react',
     title: 'Welcome to React',
     description: '',
     tags: ['JavaScipt', 'TypeScript', 'React', 'Course', 'Tutorial'],
     image:
       'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png',
-    thumbnail:
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    thumbnail: githubIcon,
   },
   {
-    to: 'https://github.com/jrposada/portfolio',
+    projectId: 'portfolio',
     title: 'Portfolio',
     description: '',
     tags: ['React', 'TypeScript', 'Web'],
     image:
       'https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png',
-    thumbnail:
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    thumbnail: githubIcon,
   },
 ]
 
 interface ProjectsProps extends WithTranslation {}
+
 function Projects({ t }: ProjectsProps) {
   return (
     <div className="projects">
@@ -92,7 +88,7 @@ function Projects({ t }: ProjectsProps) {
       </Typography.Title>
       <div className="projects__list">
         {PROJECT_INFOS.map((info) => (
-          <ProjectCard key={info.to} {...info} />
+          <ProjectCard key={info.projectId} {...info} />
         ))}
       </div>
     </div>

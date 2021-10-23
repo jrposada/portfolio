@@ -1,16 +1,22 @@
-import { Avatar, Card, Tag } from 'antd'
+import Icon from '@iconify/react'
+import { Card, Tag } from 'antd'
 import ExternalNavLink from 'components/externalNavLink'
+import { NavLink } from 'react-router-dom'
+
+import './project-card.scss'
+
+const ICON_SIZE = '2em'
 
 interface ProjectCardProps {
-  to: string
+  projectId: string
   title: string
   description: string
   tags: string[]
   image: string
-  thumbnail: string
+  thumbnail: object
 }
 function ProjectCard({
-  to,
+  projectId: id,
   title,
   description,
   tags,
@@ -18,15 +24,19 @@ function ProjectCard({
   thumbnail,
 }: ProjectCardProps) {
   return (
-    <ExternalNavLink to={to}>
+    <NavLink to={`project-details/${id}`}>
       <Card cover={<img alt="example" src={image} />} hoverable>
         <Card.Meta
-          avatar={<Avatar src={thumbnail} />}
+          avatar={
+            <ExternalNavLink to={`https://github.com/jrposada/${id}`}>
+              <Icon width={ICON_SIZE} height={ICON_SIZE} icon={thumbnail} />
+            </ExternalNavLink>
+          }
           title={title}
           description={
             <>
               {description}
-              <div>
+              <div className="project-card__tags">
                 {tags.map((t) => (
                   <Tag>{t}</Tag>
                 ))}
@@ -35,7 +45,7 @@ function ProjectCard({
           }
         />
       </Card>
-    </ExternalNavLink>
+    </NavLink>
   )
 }
 
